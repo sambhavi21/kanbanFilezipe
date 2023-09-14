@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom'
 import { MoreHorizontal } from 'react-feather'
 function KanbanBord(props) {
     var Tickets=useSelector((state=>state.Tickets))
-     
+    Tickets.sort((a, b)=>b.priority-a.priority)
     var loading_tickets=useSelector((state=>state.loading_tickets))
     var Tickets_error=useSelector((state=>state.Tickets_error))
     var dispatch=useDispatch();

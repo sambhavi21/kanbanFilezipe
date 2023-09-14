@@ -9,6 +9,7 @@ import TicketCart from './TicketCart';
 function User(props) {
 
 const Tickets=useSelector((state=>state.Tickets))
+Tickets.sort((a, b)=>b.priority-a.priority)
 const copy_tick=Tickets.users
 var users=[{"id": "usr-1",
 "name": "Anoop sharma"},
